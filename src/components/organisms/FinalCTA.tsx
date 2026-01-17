@@ -21,7 +21,7 @@ const FinalCTA = ({ ctaUrl, onCtaClick }: FinalCTAProps) => {
         </Typography>
         
         <div className="bg-brand-sand/5 backdrop-blur-sm p-12 border border-brand-sand/10 inline-flex flex-col items-center gap-10">
-          <PriceTag price="12.00" className="text-brand-sand" />
+          <PriceTag price="11.99" className="text-brand-sand" />
           
           <a 
             href={ctaUrl} 

@@ -35,7 +35,7 @@ const Footer = () => {
             © {new Date().getFullYear()} Gabo Arriola. Todos los derechos reservados.
           </Typography>
           <Typography variant="caption" className="lowercase">
-            Design inspired by Won J You
+            Design by ai4u.com.co
           </Typography>
         </div>
       </div>

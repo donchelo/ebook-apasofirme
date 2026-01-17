@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../organisms/Navbar';
 import Footer from '../organisms/Footer';
+import WhatsAppButton from '../atoms/WhatsAppButton';
 
 interface LandingTemplateProps {
   children: React.ReactNode;
@@ -14,6 +15,7 @@ const LandingTemplate = ({ children }: LandingTemplateProps) => {
         {children}
       </main>
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };

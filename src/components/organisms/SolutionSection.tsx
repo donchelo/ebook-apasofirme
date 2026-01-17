@@ -53,7 +53,7 @@ const SolutionSection = ({ teaching, benefits, ctaUrl, onCtaClick }: SolutionSec
              </Typography>
              
              <div className="flex flex-col sm:flex-row items-end justify-between gap-8">
-                <PriceTag price="12.00" />
+                <PriceTag price="11.99" />
                 <a href={ctaUrl} target="_blank" rel="noopener noreferrer" onClick={onCtaClick} className="w-full sm:w-auto">
                   <Button variant="secondary" size="lg" fullWidth>Empieza hoy</Button>
                 </a>
