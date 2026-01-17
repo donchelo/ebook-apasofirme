@@ -25,7 +25,7 @@ const Footer = () => {
             </div>
             <div>
               <Typography variant="caption" className="mb-4 block">Contacto</Typography>
-              <Typography variant="body" className="text-sm text-brand-dark/80">hola@ebookapasofirme.com</Typography>
+              <Typography variant="body" className="text-sm text-brand-dark/80">+57 321 829 8211</Typography>
             </div>
           </div>
         </div>
