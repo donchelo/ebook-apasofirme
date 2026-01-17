@@ -13,7 +13,7 @@ interface SolutionSectionProps {
 
 const SolutionSection = ({ teaching, benefits, ctaUrl, onCtaClick }: SolutionSectionProps) => {
   return (
-    <section id="solucion" className="bg-brand-arena py-32 px-6">
+    <section id="solucion" className="bg-brand-sand py-32 px-6">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <div>
@@ -48,7 +48,7 @@ const SolutionSection = ({ teaching, benefits, ctaUrl, onCtaClick }: SolutionSec
              </div>
              
              <Typography variant="h3" className="mb-6">Comienza tu camino hoy</Typography>
-             <Typography variant="body" className="mb-8 text-brand-gray-warm">
+             <Typography variant="body" className="mb-8 text-brand-dark/80">
                 Si sientes que el estrés y la inseguridad interna te están pasando factura, este ebook es un buen primer paso.
              </Typography>
              

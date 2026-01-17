@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import LandingTemplate from '../components/templates/LandingTemplate';
 import HeroSection from '../components/organisms/HeroSection';
 import ProblemSection from '../components/organisms/ProblemSection';
+import InsightSection from '../components/organisms/InsightSection';
 import SolutionSection from '../components/organisms/SolutionSection';
 import BioSection from '../components/organisms/BioSection';
 import FinalCTA from '../components/organisms/FinalCTA';
@@ -64,6 +65,8 @@ const LandingPage = () => {
       />
       
       <ProblemSection />
+      
+      <InsightSection />
       
       <SolutionSection 
         teaching={content.solution.teaching}

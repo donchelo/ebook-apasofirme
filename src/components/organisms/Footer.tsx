@@ -3,14 +3,14 @@ import Typography from '../atoms/Typography';
 
 const Footer = () => {
   return (
-    <footer className="bg-brand-arena py-20 px-6 border-t border-brand-gray-light/10">
+    <footer className="bg-brand-sand py-20 px-6 border-t border-brand-stone/20">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-start gap-12">
           <div>
             <Typography variant="nav" className="text-xl font-serif mb-6 block">
               A PASO FIRME
             </Typography>
-            <Typography variant="body" className="max-w-xs text-brand-gray-warm">
+            <Typography variant="body" className="max-w-xs text-brand-dark/70">
               Recupera tu calma, claridad y confianza emocional con base en neurociencia.
             </Typography>
           </div>
@@ -25,12 +25,12 @@ const Footer = () => {
             </div>
             <div>
               <Typography variant="caption" className="mb-4 block">Contacto</Typography>
-              <Typography variant="body" className="text-sm">hola@ebookapasofirme.com</Typography>
+              <Typography variant="body" className="text-sm text-brand-dark/80">hola@ebookapasofirme.com</Typography>
             </div>
           </div>
         </div>
         
-        <div className="mt-20 pt-8 border-t border-brand-gray-light/10 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="mt-20 pt-8 border-t border-brand-stone/20 flex flex-col md:flex-row justify-between items-center gap-4">
           <Typography variant="caption">
             © {new Date().getFullYear()} Gabo Arriola. Todos los derechos reservados.
           </Typography>

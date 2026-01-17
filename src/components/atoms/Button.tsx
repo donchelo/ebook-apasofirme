@@ -15,19 +15,19 @@ const Button = ({
   children,
   ...props
 }: ButtonProps) => {
-  const baseStyles = 'inline-flex items-center justify-center font-sans font-medium transition-all duration-300 disabled:opacity-50 disabled:pointer-events-none uppercase tracking-widest';
+  const baseStyles = 'inline-flex items-center justify-center font-sans font-medium transition-all duration-300 disabled:opacity-50 disabled:pointer-events-none tracking-wide rounded-sm transform hover:-translate-y-1 active:translate-y-0';
   
   const variants = {
-    primary: 'bg-brand-blue text-white hover:bg-opacity-90',
-    secondary: 'bg-brand-olive text-white hover:bg-opacity-90',
-    outline: 'border border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white',
-    ghost: 'text-brand-blue hover:bg-brand-blue/5',
+    primary: "bg-brand-dark text-brand-sand hover:bg-brand-olive shadow-lg hover:shadow-xl",
+    secondary: "bg-brand-olive text-white hover:bg-brand-dark shadow-md",
+    outline: "border-2 border-brand-dark text-brand-dark hover:bg-brand-dark hover:text-brand-sand",
+    ghost: 'text-brand-dark hover:bg-brand-dark/5',
   };
 
   const sizes = {
-    sm: 'px-4 py-2 text-xs',
-    md: 'px-8 py-4 text-sm',
-    lg: 'px-12 py-6 text-base',
+    sm: 'px-6 py-3 text-sm',
+    md: 'px-8 py-4 text-lg',
+    lg: 'px-12 py-6 text-xl',
   };
 
   return (

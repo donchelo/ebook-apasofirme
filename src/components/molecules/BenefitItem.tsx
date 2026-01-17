@@ -13,7 +13,7 @@ const BenefitItem = ({ text }: BenefitItemProps) => {
       <div className="mt-1 flex h-6 w-6 items-center justify-center rounded-full bg-brand-olive/10 text-brand-olive">
         <Icon icon={Check} size={16} />
       </div>
-      <Typography variant="body" className="text-brand-gray-warm">
+      <Typography variant="body" className="text-brand-dark/80">
         {text}
       </Typography>
     </div>

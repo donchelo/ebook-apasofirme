@@ -8,7 +8,7 @@ interface LandingTemplateProps {
 
 const LandingTemplate = ({ children }: LandingTemplateProps) => {
   return (
-    <div className="min-h-screen bg-brand-arena selection:bg-brand-olive/20 selection:text-brand-blue">
+    <div className="min-h-screen bg-brand-sand selection:bg-brand-olive/20 selection:text-brand-dark">
       <Navbar />
       <main>
         {children}

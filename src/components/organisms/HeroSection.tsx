@@ -23,7 +23,7 @@ const HeroSection = ({ title, subtitle, ctaText, videoUrl, onCtaClick }: HeroSec
           />
         </div>
         
-        <div className="lg:col-span-5 w-full aspect-video lg:aspect-square bg-brand-beige overflow-hidden relative group">
+        <div className="lg:col-span-5 w-full aspect-video lg:aspect-square bg-brand-stone overflow-hidden relative group">
           <iframe
             className="absolute inset-0 w-full h-full grayscale hover:grayscale-0 transition-all duration-700"
             src={`https://www.youtube.com/embed/${videoUrl.split('v=')[1] || videoUrl.split('/').pop()}`}
@@ -32,17 +32,17 @@ const HeroSection = ({ title, subtitle, ctaText, videoUrl, onCtaClick }: HeroSec
             allowFullScreen
           ></iframe>
           <div className="absolute top-4 right-4 z-10">
-            <Typography variant="caption" className="bg-brand-blue/90 text-white px-3 py-1">Video Protagonista</Typography>
+            <Typography variant="caption" className="bg-brand-dark/90 text-brand-sand px-3 py-1">Video Protagonista</Typography>
           </div>
         </div>
       </div>
       
-      <div className="mt-20 border-t border-brand-gray-light/20 pt-8 overflow-hidden">
+      <div className="mt-20 border-t border-brand-stone/40 pt-8 overflow-hidden">
         <div className="flex animate-marquee whitespace-nowrap">
-          <Typography variant="display" className="text-brand-gray-light/10 text-9xl mr-20">
+          <Typography variant="display" className="text-brand-stone text-9xl mr-20">
             NEUROCIENCIA • CALMA • CLARIDAD • CONFIANZA •
           </Typography>
-          <Typography variant="display" className="text-brand-gray-light/10 text-9xl mr-20">
+          <Typography variant="display" className="text-brand-stone text-9xl mr-20">
             NEUROCIENCIA • CALMA • CLARIDAD • CONFIANZA •
           </Typography>
         </div>
