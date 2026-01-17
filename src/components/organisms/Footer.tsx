@@ -15,14 +15,7 @@ const Footer = () => {
             </Typography>
           </div>
           
-          <div className="grid grid-cols-2 gap-12">
-            <div>
-              <Typography variant="caption" className="mb-4 block">Legal</Typography>
-              <ul className="space-y-2">
-                <li><a href="#" className="text-sm hover:text-brand-olive transition-colors">Términos y Condiciones</a></li>
-                <li><a href="#" className="text-sm hover:text-brand-olive transition-colors">Privacidad</a></li>
-              </ul>
-            </div>
+          <div className="grid grid-cols-1 gap-12">
             <div>
               <Typography variant="caption" className="mb-4 block">Contacto</Typography>
               <Typography variant="body" className="text-sm text-brand-dark/80">+57 321 829 8211</Typography>
