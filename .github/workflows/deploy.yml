@@ -8,6 +8,12 @@ on:
 permissions:
   contents: write
 
+# Permite solo un despliegue a la vez para evitar conflictos.
+# No cancela despliegues en progreso para asegurar que las subidas se completen.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -32,4 +38,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist
-          branch: gh-pages
+          branch: gh-pages # Rama donde se subirá el contenido compilado
