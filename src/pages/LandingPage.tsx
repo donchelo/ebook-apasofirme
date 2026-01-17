@@ -49,7 +49,7 @@ const LandingPage = () => {
   const handlePurchase = () => {
     trackPixelEvent('InitiateCheckout', {
       content_name: 'Cómo despertar tu confianza - A Paso Firme',
-      value: 12.00,
+      value: 11.99,
       currency: 'USD',
     });
     window.open(content.solution.ctaUrl, '_blank');
