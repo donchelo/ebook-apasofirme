@@ -42,6 +42,7 @@ const LandingPage = () => {
       name: "Gabo Arriola",
       role: "Coach en Neurociencia y PNL",
       bio: "Acompaño a personas que se sienten agotadas por dentro a recuperar claridad, calma y confianza emocional.",
+      imageSrc: "/autor.jpeg",
     }
   };
 
@@ -79,6 +80,7 @@ const LandingPage = () => {
         name={content.author.name}
         role={content.author.role}
         bio={content.author.bio}
+        imageSrc={content.author.imageSrc}
       />
 
       <FinalCTA 
