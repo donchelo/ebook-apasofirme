@@ -19,7 +19,10 @@ const ProblemSection = () => {
               Muchas personas viven así: <br/>
               <span className="text-brand-sand/40 italic font-light">Trabajan.</span> <br/>
               <span className="text-brand-sand/60 italic font-light">Cumplen.</span> <br/>
-              <span className="text-brand-sand/80 italic font-light">Siguen.</span>
+              <span className="text-brand-sand/80 italic font-light">Siguen.</span> <br/>
+              <span className="text-brand-sand italic font-light text-5xl mt-10 block leading-tight">
+                Viven como en piloto automático.
+              </span>
             </Typography>
           </div>
           
