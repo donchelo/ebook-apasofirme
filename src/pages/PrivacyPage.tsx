@@ -13,7 +13,7 @@ const PrivacyPage = ({ onNavigate }: { onNavigate: (page: 'landing' | 'terms' | 
             <section>
               <Typography variant="h3" className="text-brand-dark mb-4">1. Recolección de Información</Typography>
               <Typography variant="body">
-                Recopilamos información básica necesaria para mejorar tu experiencia. Esto incluye datos de navegación a través de Meta Pixel para entender cómo interactúas con nuestra página y datos de contacto si decides escribirnos por WhatsApp o correo electrónico.
+                Recopilamos información básica necesaria para mejorar tu experiencia. Esto incluye datos de navegación a través de Meta Pixel para entender cómo interactúas con nuestra página y datos de contacto si decides escribirnos por WhatsApp.
               </Typography>
             </section>
 
@@ -23,7 +23,7 @@ const PrivacyPage = ({ onNavigate }: { onNavigate: (page: 'landing' | 'terms' | 
                 Tus datos se utilizan exclusivamente para:
                 <ul className="list-disc ml-6 mt-4 space-y-2">
                   <li>Procesar y facilitar tu acceso al ebook "A Paso Firme".</li>
-                  <li>Brindar soporte personalizado vía WhatsApp o email.</li>
+                  <li>Brindar soporte personalizado vía WhatsApp.</li>
                   <li>Optimizar nuestras campañas de publicidad en redes sociales.</li>
                 </ul>
               </Typography>
@@ -39,7 +39,7 @@ const PrivacyPage = ({ onNavigate }: { onNavigate: (page: 'landing' | 'terms' | 
             <section>
               <Typography variant="h3" className="text-brand-dark mb-4">4. Contacto</Typography>
               <Typography variant="body">
-                Si tienes dudas sobre tus datos, puedes contactarnos en <span className="text-brand-accent">hola@apasofirme.com</span>.
+                Si tienes dudas sobre tus datos, puedes contactarnos a través de nuestro WhatsApp <span className="text-brand-accent">+57 321 829 8211</span>.
               </Typography>
             </section>
           </div>

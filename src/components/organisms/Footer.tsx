@@ -23,7 +23,6 @@ const Footer = ({ onNavigate }: FooterProps) => {
             <div className="text-left lg:text-right">
               <Typography variant="caption" className="mb-4 block text-brand-accent">Contacto</Typography>
               <Typography variant="h2" className="text-brand-sand hover:text-brand-accent transition-colors cursor-pointer">+57 321 829 8211</Typography>
-              <Typography variant="body" className="text-brand-sand/40">hola@apasofirme.com</Typography>
             </div>
           </div>
         </div>
