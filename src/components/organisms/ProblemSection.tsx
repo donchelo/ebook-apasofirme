@@ -6,35 +6,42 @@ const ProblemSection = () => {
     'Están cansadas emocionalmente',
     'Piensan demasiado',
     'Viven con ansiedad constante',
-    'Sienten que algo no está bien… aunque "todo debería estar bien"',
+    'Sienten que algo no está bien',
   ];
 
   return (
-    <section id="problema" className="bg-brand-stone py-32 px-6 overflow-hidden">
+    <section id="problema" className="bg-brand-dark py-48 px-6 overflow-hidden">
       <div className="container mx-auto">
-        <div className="max-w-4xl">
-          <Typography variant="caption" className="text-brand-olive mb-6">El Contexto</Typography>
-          <Typography variant="h2" className="mb-12">
-            Muchas personas viven así: Trabajan. Cumplen. Siguen adelante.
-          </Typography>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
+          <div>
+            <Typography variant="caption" className="text-brand-sand/40 mb-12">El Contexto</Typography>
+            <Typography variant="display" className="text-brand-sand mb-16 leading-[0.9]">
+              Muchas personas viven así: <br/>
+              <span className="text-brand-sand/40 italic font-light">Trabajan.</span> <br/>
+              <span className="text-brand-sand/60 italic font-light">Cumplen.</span> <br/>
+              <span className="text-brand-sand/80 italic font-light">Siguen.</span>
+            </Typography>
+          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 border-t border-brand-dark/10 pt-12">
-            <div>
-              <Typography variant="h3" className="mb-8 font-normal italic opacity-80">
-                Pero por dentro...
-              </Typography>
-              <ul className="space-y-6">
-                {points.map((point, index) => (
-                  <li key={index} className="flex gap-4 items-baseline border-b border-brand-dark/5 pb-4">
-                    <span className="text-brand-olive font-serif">0{index + 1}</span>
-                    <Typography variant="body" className="text-xl">{point}</Typography>
-                  </li>
-                ))}
-              </ul>
+          <div className="border-l border-brand-sand/10 pl-12">
+            <Typography variant="h3" className="mb-16 text-brand-sand font-light italic">
+              Pero por dentro...
+            </Typography>
+            <div className="space-y-12">
+              {points.map((point, index) => (
+                <div key={index} className="group relative">
+                  <span className="absolute -left-24 top-0 text-8xl font-serif text-brand-sand/5 transition-colors group-hover:text-brand-olive/20">
+                    0{index + 1}
+                  </span>
+                  <Typography variant="h2" className="text-brand-sand relative z-10 group-hover:translate-x-4 transition-transform duration-500">
+                    {point}
+                  </Typography>
+                </div>
+              ))}
             </div>
             
-            <div className="flex flex-col justify-center">
-              <Typography variant="body" className="text-2xl leading-relaxed font-serif italic text-brand-dark/70">
+            <div className="mt-32 pt-16 border-t border-brand-sand/10">
+              <Typography variant="body" className="text-3xl leading-relaxed font-serif italic text-brand-sand/60">
                 "Esta rumiación mental y fatiga emocional no son casualidad. Son señales de un cuerpo tratando de protegerse."
               </Typography>
             </div>

@@ -12,9 +12,9 @@ interface HeroSectionProps {
 
 const HeroSection = ({ title, subtitle, ctaText, videoUrl, onCtaClick }: HeroSectionProps) => {
   return (
-    <section id="hero" className="min-h-screen flex flex-col pt-32 pb-20 px-6">
-      <div className="container mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-        <div className="lg:col-span-7">
+    <section id="hero" className="min-h-screen flex flex-col pt-48 pb-32 px-6 bg-brand-sand">
+      <div className="container mx-auto">
+        <div className="mb-24">
           <HeroContent 
             title={title}
             subtitle={subtitle}
@@ -23,7 +23,7 @@ const HeroSection = ({ title, subtitle, ctaText, videoUrl, onCtaClick }: HeroSec
           />
         </div>
         
-        <div className="lg:col-span-5 w-full aspect-video lg:aspect-square bg-brand-stone overflow-hidden relative group">
+        <div className="w-full aspect-video lg:aspect-[21/9] bg-brand-dark overflow-hidden relative border-[12px] border-brand-dark shadow-2xl">
           <iframe
             className="absolute inset-0 w-full h-full grayscale hover:grayscale-0 transition-all duration-700"
             src={`https://www.youtube.com/embed/${videoUrl.split('v=')[1] || videoUrl.split('/').pop()}`}

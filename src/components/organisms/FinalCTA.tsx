@@ -10,35 +10,44 @@ interface FinalCTAProps {
 
 const FinalCTA = ({ ctaUrl, onCtaClick }: FinalCTAProps) => {
   return (
-    <section id="cta-final" className="bg-brand-dark text-brand-sand py-32 px-6">
-      <div className="container mx-auto max-w-4xl text-center">
-        <Typography variant="caption" className="text-brand-olive mb-8 block">
-          Toma el primer paso
-        </Typography>
-        
-        <Typography variant="h2" className="mb-12 text-balance text-brand-sand">
-          Si sientes que el estrés y la inseguridad interna te están pasando factura, este ebook es un buen primer paso.
-        </Typography>
-        
-        <div className="bg-brand-sand/5 backdrop-blur-sm p-12 border border-brand-sand/10 inline-flex flex-col items-center gap-10">
-          <PriceTag price="11.99" className="text-brand-sand" />
+    <section id="cta-final" className="bg-brand-olive text-brand-sand py-48 px-6 border-y-[20px] border-brand-dark">
+      <div className="container mx-auto">
+        <div className="flex flex-col lg:flex-row gap-24 items-center">
+          <div className="lg:w-2/3">
+            <Typography variant="caption" className="text-brand-dark font-bold mb-12 block">
+              Toma el primer paso
+            </Typography>
+            
+            <Typography variant="giant" className="text-brand-sand mb-12 leading-[0.85]">
+              Recupera tu <br/>
+              <span className="text-brand-dark italic">calma</span> interna.
+            </Typography>
+            
+            <Typography variant="h2" className="text-brand-sand/80 font-light max-w-2xl leading-relaxed">
+              Si sientes que el estrés y la inseguridad interna te están pasando factura, este ebook es tu primer paso hacia la regulación.
+            </Typography>
+          </div>
           
-          <a 
-            href={ctaUrl} 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            onClick={onCtaClick}
-            className="w-full sm:w-auto"
-          >
-            <Button variant="secondary" size="lg" fullWidth>
-              👉 Empieza hoy
-            </Button>
-          </a>
+          <div className="lg:w-1/3 w-full bg-brand-dark p-16 shadow-2xl flex flex-col items-start gap-12">
+            <PriceTag price="11.99" className="text-brand-sand" />
+            
+            <a 
+              href={ctaUrl} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              onClick={onCtaClick}
+              className="w-full"
+            >
+              <Button variant="secondary" size="lg" fullWidth className="bg-brand-sand text-brand-dark border-brand-sand hover:text-brand-sand">
+                Adquirir ahora
+              </Button>
+            </a>
+            
+            <Typography variant="caption" className="text-brand-sand/40 text-xs">
+              Garantía Hotmart • Acceso Inmediato
+            </Typography>
+          </div>
         </div>
-        
-        <Typography variant="body" className="mt-12 text-brand-sand/60 text-sm">
-          Garantía de satisfacción Hotmart. Acceso inmediato tras la compra.
-        </Typography>
       </div>
     </section>
   );

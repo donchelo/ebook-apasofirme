@@ -3,31 +3,36 @@ import Typography from '../atoms/Typography';
 
 const Footer = () => {
   return (
-    <footer className="bg-brand-sand py-20 px-6 border-t border-brand-stone/20">
+    <footer className="bg-brand-dark text-brand-sand py-32 px-6">
       <div className="container mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-start gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-end mb-32">
           <div>
-            <Typography variant="nav" className="text-xl font-serif mb-6 block">
-              A PASO FIRME
+            <Typography variant="giant" className="text-brand-sand opacity-10 mb-8 block select-none">
+              A PASO <br/> FIRME.
             </Typography>
-            <Typography variant="body" className="max-w-xs text-brand-dark/70">
-              Recupera tu calma, claridad y confianza emocional con base en neurociencia.
+            <Typography variant="h3" className="text-brand-sand font-light italic max-w-md">
+              La regulación emocional no es un destino, es una práctica diaria.
             </Typography>
           </div>
           
-          <div className="grid grid-cols-1 gap-12">
-            <div>
-              <Typography variant="caption" className="mb-4 block">Contacto</Typography>
-              <Typography variant="body" className="text-sm text-brand-dark/80">+57 321 829 8211</Typography>
+          <div className="flex flex-col lg:items-end gap-12">
+            <div className="text-left lg:text-right">
+              <Typography variant="caption" className="mb-4 block text-brand-olive">Contacto</Typography>
+              <Typography variant="h2" className="text-brand-sand">+57 321 829 8211</Typography>
+              <Typography variant="body" className="text-brand-sand/40">hola@apasofirme.com</Typography>
             </div>
           </div>
         </div>
         
-        <div className="mt-20 pt-8 border-t border-brand-stone/20 flex flex-col md:flex-row justify-between items-center gap-4">
-          <Typography variant="caption">
+        <div className="pt-12 border-t border-brand-sand/10 flex flex-col md:flex-row justify-between items-center gap-8">
+          <Typography variant="caption" className="text-brand-sand/40 tracking-normal">
             © {new Date().getFullYear()} Gabo Arriola. Todos los derechos reservados.
           </Typography>
-          <Typography variant="caption" className="lowercase">
+          <div className="flex gap-12">
+            <Typography variant="caption" className="text-brand-sand/40 hover:text-brand-olive transition-colors cursor-pointer">Términos</Typography>
+            <Typography variant="caption" className="text-brand-sand/40 hover:text-brand-olive transition-colors cursor-pointer">Privacidad</Typography>
+          </div>
+          <Typography variant="caption" className="text-brand-sand/20 lowercase tracking-normal">
             Design by ai4u.com.co
           </Typography>
         </div>

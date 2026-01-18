@@ -13,51 +13,59 @@ interface SolutionSectionProps {
 
 const SolutionSection = ({ teaching, benefits, ctaUrl, onCtaClick }: SolutionSectionProps) => {
   return (
-    <section id="solucion" className="bg-brand-sand py-32 px-6">
+    <section id="solucion" className="bg-brand-sand py-48 px-6 border-t-8 border-brand-dark">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-          <div>
-            <Typography variant="caption" className="mb-6">La Propuesta</Typography>
-            <Typography variant="h2" className="mb-8">
-              Este ebook te enseña, paso a paso, a:
-            </Typography>
-            
-            <ul className="space-y-4 mb-12">
-              {teaching.map((item, index) => (
-                <li key={index} className="flex items-center gap-3">
-                  <span className="h-1.5 w-1.5 bg-brand-olive rounded-full"></span>
-                  <Typography variant="body" className="text-xl">{item}</Typography>
-                </li>
-              ))}
-            </ul>
-
-            <Typography variant="h3" className="mb-8 text-2xl font-normal italic">
-              Beneficios que notarás:
-            </Typography>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6 mb-16">
-              {benefits.map((benefit, index) => (
-                <BenefitItem key={index} text={benefit} />
-              ))}
+        <div className="flex flex-col gap-32">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-end">
+            <div>
+              <Typography variant="caption" className="mb-12">La Propuesta</Typography>
+              <Typography variant="giant" className="mb-12 leading-[0.85]">
+                Paso a paso <br/>
+                <span className="italic font-light">hacia ti.</span>
+              </Typography>
+            </div>
+            <div>
+              <ul className="space-y-8 border-l-4 border-brand-olive pl-12">
+                {teaching.map((item, index) => (
+                  <li key={index}>
+                    <Typography variant="h3" className="text-3xl">{item}</Typography>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
 
-          <div className="bg-white p-12 shadow-2xl border-t-4 border-brand-olive relative">
-             <div className="absolute -top-6 -right-6 h-24 w-24 bg-brand-olive flex items-center justify-center rotate-12">
-                <Typography variant="caption" className="text-white text-center leading-tight">Acceso<br/>Inmediato</Typography>
-             </div>
-             
-             <Typography variant="h3" className="mb-6">Comienza tu camino hoy</Typography>
-             <Typography variant="body" className="mb-8 text-brand-dark/80">
-                Si sientes que el estrés y la inseguridad interna te están pasando factura, este ebook es un buen primer paso.
-             </Typography>
-             
-             <div className="flex flex-col sm:flex-row items-end justify-between gap-8">
-                <PriceTag price="11.99" />
-                <a href={ctaUrl} target="_blank" rel="noopener noreferrer" onClick={onCtaClick} className="w-full sm:w-auto">
-                  <Button variant="secondary" size="lg" fullWidth>Empieza hoy</Button>
-                </a>
-             </div>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+            <div className="lg:col-span-7">
+              <Typography variant="h1" className="mb-16">
+                Beneficios que notarás <br/>
+                <span className="text-brand-olive">desde la primera semana:</span>
+              </Typography>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-12">
+                {benefits.map((benefit, index) => (
+                  <BenefitItem key={index} text={benefit} />
+                ))}
+              </div>
+            </div>
+
+            <div className="lg:col-span-5 bg-brand-dark p-16 relative">
+               <div className="absolute -top-12 -right-12 h-32 w-32 bg-brand-olive flex items-center justify-center -rotate-6 shadow-xl border-4 border-brand-sand">
+                  <Typography variant="caption" className="text-brand-sand text-center leading-tight font-bold">ACCESO<br/>TOTAL</Typography>
+               </div>
+               
+               <Typography variant="h2" className="mb-8 text-brand-sand">Comienza tu camino hoy</Typography>
+               <Typography variant="body" className="mb-16 text-brand-sand/60 text-xl">
+                  Si sientes que el estrés y la inseguridad interna te están pasando factura, este ebook es un buen primer paso.
+               </Typography>
+               
+               <div className="flex flex-col gap-12">
+                  <PriceTag price="11.99" className="text-brand-sand" />
+                  <a href={ctaUrl} target="_blank" rel="noopener noreferrer" onClick={onCtaClick} className="w-full">
+                    <Button variant="secondary" size="lg" fullWidth>Adquirir ahora</Button>
+                  </a>
+               </div>
+            </div>
           </div>
         </div>
       </div>
