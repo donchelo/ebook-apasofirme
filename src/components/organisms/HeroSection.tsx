@@ -12,8 +12,17 @@ interface HeroSectionProps {
 
 const HeroSection = ({ title, subtitle, ctaText, videoUrl, onCtaClick }: HeroSectionProps) => {
   return (
-    <section id="hero" className="min-h-screen flex flex-col pt-64 pb-32 px-6 bg-brand-sand">
-      <div className="container mx-auto">
+    <section id="hero" className="relative min-h-screen flex flex-col pt-64 pb-32 px-6 bg-brand-sand overflow-hidden">
+      {/* Elemento Decorativo Sutil (Boceto) */}
+      <div className="absolute top-0 right-0 w-full lg:w-1/2 h-full opacity-15 pointer-events-none select-none z-0">
+        <img 
+          src="/hero-sketch.png" 
+          alt="" 
+          className="w-full h-full object-contain object-right-top grayscale mix-blend-multiply transition-opacity duration-1000"
+        />
+      </div>
+
+      <div className="container mx-auto relative z-10">
         <div className="mb-24">
           <HeroContent 
             title={title}
