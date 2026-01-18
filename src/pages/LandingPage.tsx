@@ -8,7 +8,7 @@ import BioSection from '../components/organisms/BioSection';
 import FinalCTA from '../components/organisms/FinalCTA';
 import { trackPixelEvent } from '../utils/pixel';
 
-const LandingPage = () => {
+const LandingPage = ({ onNavigate }: { onNavigate: (page: 'landing' | 'terms' | 'privacy') => void }) => {
   useEffect(() => {
     trackPixelEvent('ViewContent', {
       content_name: 'Ebook Landing Page',
@@ -40,8 +40,8 @@ const LandingPage = () => {
     },
     author: {
       name: "Gabo Arriola",
-      role: "Coach en Neurociencia y PNL",
-      bio: "Acompaño a personas que se sienten agotadas por dentro a recuperar claridad, calma y confianza emocional.",
+      role: "Coach en Neurociencia, Máster en PNL y Coach Ontológico",
+      bio: "Soy Gabriel Arriola, coach en neurociencia, máster en Programación Neurolingüística y coach ontológico. Desde el año 2000 he dedicado mi vida a acompañar a personas en procesos de transformación personal, regulación emocional y construcción de confianza interna.\n\nNo llegué a este camino desde la teoría, sino desde la experiencia real de atravesar confusión, inseguridad y momentos de quiebre que me llevaron a entender cómo funciona la mente, el sistema nervioso y la identidad emocional.\n\nMi trabajo integra neurociencia aplicada, coaching práctico y entrenamiento emocional, con un enfoque claro: ayudar a las personas a recuperar calma, claridad y seguridad desde adentro, de forma consciente y sostenible.\n\nHoy comparto estas herramientas con quienes sienten que saben mucho, pero no logran sostenerse emocionalmente ni avanzar con firmeza en su vida.",
       imageSrc: "/autor.jpeg",
     }
   };
@@ -56,7 +56,7 @@ const LandingPage = () => {
   };
 
   return (
-    <LandingTemplate>
+    <LandingTemplate onNavigate={onNavigate}>
       <HeroSection 
         title={content.hero.title}
         subtitle={content.hero.subtitle}

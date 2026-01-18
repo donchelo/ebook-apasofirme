@@ -12,7 +12,7 @@ interface HeroSectionProps {
 
 const HeroSection = ({ title, subtitle, ctaText, videoUrl, onCtaClick }: HeroSectionProps) => {
   return (
-    <section id="hero" className="min-h-screen flex flex-col pt-48 pb-32 px-6 bg-brand-sand">
+    <section id="hero" className="min-h-screen flex flex-col pt-64 pb-32 px-6 bg-brand-sand">
       <div className="container mx-auto">
         <div className="mb-24">
           <HeroContent 
@@ -37,12 +37,12 @@ const HeroSection = ({ title, subtitle, ctaText, videoUrl, onCtaClick }: HeroSec
         </div>
       </div>
       
-      <div className="mt-20 border-t border-brand-stone/40 pt-8 overflow-hidden">
+      <div className="mt-20 border-t border-brand-dark pt-8 overflow-hidden">
         <div className="flex animate-marquee whitespace-nowrap">
-          <Typography variant="display" className="text-brand-stone text-9xl mr-20">
+          <Typography variant="display" className="text-[#FF4D00] text-9xl mr-20">
             NEUROCIENCIA • CALMA • CLARIDAD • CONFIANZA •
           </Typography>
-          <Typography variant="display" className="text-brand-stone text-9xl mr-20">
+          <Typography variant="display" className="text-[#FF4D00] text-9xl mr-20">
             NEUROCIENCIA • CALMA • CLARIDAD • CONFIANZA •
           </Typography>
         </div>

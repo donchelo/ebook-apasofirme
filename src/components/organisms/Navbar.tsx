@@ -2,20 +2,33 @@ import React, { useState } from 'react';
 import Typography from '../atoms/Typography';
 import { cn } from '../../utils/cn';
 
-const Navbar = () => {
+interface NavbarProps {
+  onNavigate?: (page: 'landing' | 'terms' | 'privacy') => void;
+}
+
+const Navbar = ({ onNavigate }: NavbarProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const navItems = [
-    { label: 'Inicio', href: '#hero' },
-    { label: 'El Problema', href: '#problema' },
-    { label: 'La Solución', href: '#solucion' },
-    { label: 'Sobre Gabo', href: '#autor' },
+    { label: 'Inicio', href: '#hero', action: () => onNavigate?.('landing') },
+    { label: 'El Problema', href: '#problema', action: () => onNavigate?.('landing') },
+    { label: 'La Solución', href: '#solucion', action: () => onNavigate?.('landing') },
+    { label: 'Sobre Gabo', href: '#autor', action: () => onNavigate?.('landing') },
   ];
 
+  const handleLogoClick = () => {
+    onNavigate?.('landing');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-brand-sand/80 backdrop-blur-md border-b border-brand-stone/20">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-brand-sand/90 backdrop-blur-md border-b border-brand-dark/10">
       <div className="container mx-auto px-6 py-6 flex justify-between items-center">
-        <Typography variant="nav" className="text-2xl font-bold tracking-widest font-serif text-brand-dark">
-          GABO ARRIOLA
+        <Typography 
+          variant="nav" 
+          className="text-2xl font-bold tracking-widest font-serif text-brand-dark group cursor-pointer"
+          onClick={handleLogoClick}
+        >
+          GABO <span className="text-[#FF4D00]">ARRIOLA</span>
         </Typography>
         
         <div className="hidden md:flex gap-10">
@@ -23,7 +36,13 @@ const Navbar = () => {
             <a 
               key={item.label} 
               href={item.href} 
-              className="text-brand-dark/60 hover:text-brand-dark transition-colors duration-300"
+              onClick={(e) => {
+                item.action();
+                if (window.location.hash === item.href) {
+                  setIsOpen(false);
+                }
+              }}
+              className="text-brand-dark/60 hover:text-[#FF4D00] transition-colors duration-300"
             >
               <Typography variant="nav">{item.label}</Typography>
             </a>
@@ -51,7 +70,10 @@ const Navbar = () => {
           <a 
             key={item.label} 
             href={item.href} 
-            onClick={() => setIsOpen(false)}
+            onClick={() => {
+              item.action();
+              setIsOpen(false);
+            }}
             className="text-brand-dark"
           >
             <Typography variant="h3">{item.label}</Typography>

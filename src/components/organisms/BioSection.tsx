@@ -14,8 +14,9 @@ const BioSection = ({ name, role, bio, imageSrc }: BioSectionProps) => {
     <section id="autor" className="bg-brand-sand py-48 px-6 border-y-[20px] border-brand-dark">
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row gap-24 items-center">
-          <div className="w-full lg:w-1/2 aspect-[4/5] bg-brand-dark relative overflow-hidden group border-[16px] border-brand-dark shadow-2xl">
-            {imageSrc ? (
+        <div className="w-full lg:w-1/2 aspect-[4/5] bg-brand-dark relative overflow-hidden group border-[16px] border-brand-dark shadow-2xl">
+          <div className="absolute top-8 left-8 w-24 h-24 bg-brand-accent z-10 -rotate-12 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+          {imageSrc ? (
               <img 
                 src={imageSrc} 
                 alt={name} 
@@ -37,13 +38,15 @@ const BioSection = ({ name, role, bio, imageSrc }: BioSectionProps) => {
               Gabo <br/>
               <span className="italic font-light text-brand-olive">Arriola.</span>
             </Typography>
-            <div className="border-t-2 border-brand-dark/10 pt-12">
-              <Typography variant="h2" className="mb-12 font-light">
+            <div className="border-t-2 border-brand-dark/10 pt-12 space-y-6">
+              <Typography variant="h2" className="mb-8 font-light">
                 Acompañando tu proceso con <span className="font-serif italic underline decoration-brand-olive underline-offset-8">ciencia y empatía.</span>
               </Typography>
-              <Typography variant="body" className="text-2xl leading-relaxed text-brand-dark/80 italic font-serif">
-                "{bio}"
-              </Typography>
+              {bio.split('\n\n').map((paragraph, index) => (
+                <Typography key={index} variant="body" className="text-xl md:text-2xl leading-relaxed text-brand-dark/80 font-serif">
+                  {paragraph}
+                </Typography>
+              ))}
             </div>
           </div>
         </div>

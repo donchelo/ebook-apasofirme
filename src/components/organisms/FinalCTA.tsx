@@ -14,13 +14,13 @@ const FinalCTA = ({ ctaUrl, onCtaClick }: FinalCTAProps) => {
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row gap-24 items-center">
           <div className="lg:w-2/3">
-            <Typography variant="caption" className="text-brand-dark font-bold mb-12 block">
+            <Typography variant="caption" className="text-[#FF4D00] font-bold mb-12 block">
               Toma el primer paso
             </Typography>
             
             <Typography variant="giant" className="text-brand-sand mb-12 leading-[0.85]">
               Recupera tu <br/>
-              <span className="text-brand-dark italic">calma</span> interna.
+              <span className="text-[#FF4D00] italic">calma</span> interna.
             </Typography>
             
             <Typography variant="h2" className="text-brand-sand/80 font-light max-w-2xl leading-relaxed">

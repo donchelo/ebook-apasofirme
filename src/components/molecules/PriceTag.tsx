@@ -10,9 +10,9 @@ interface PriceTagProps {
 
 const PriceTag = ({ price, currency = 'USD', className }: PriceTagProps) => {
   return (
-    <div className={cn("flex flex-col border-l-4 border-brand-olive pl-8", className)}>
+    <div className={cn("flex flex-col border-l-4 border-[#FF4D00] pl-8", className)}>
       <Typography variant="caption" className="mb-4 opacity-60">Inversión única</Typography>
-      <div className="flex items-baseline gap-4">
+      <div className="flex items-baseline gap-4 text-[#FF4D00]">
         <Typography variant="giant" as="span" className="text-7xl md:text-8xl font-serif text-current">
           ${price}
         </Typography>

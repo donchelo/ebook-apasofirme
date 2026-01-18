@@ -50,7 +50,7 @@ const SolutionSection = ({ teaching, benefits, ctaUrl, onCtaClick }: SolutionSec
             </div>
 
             <div className="lg:col-span-5 bg-brand-dark p-16 relative">
-               <div className="absolute -top-12 -right-12 h-32 w-32 bg-brand-olive flex items-center justify-center -rotate-6 shadow-xl border-4 border-brand-sand">
+               <div className="absolute -top-12 -right-12 h-32 w-32 bg-[#FF4D00] flex items-center justify-center -rotate-6 shadow-xl border-4 border-brand-sand">
                   <Typography variant="caption" className="text-brand-sand text-center leading-tight font-bold">ACCESO<br/>TOTAL</Typography>
                </div>
                
@@ -62,7 +62,7 @@ const SolutionSection = ({ teaching, benefits, ctaUrl, onCtaClick }: SolutionSec
                <div className="flex flex-col gap-12">
                   <PriceTag price="11.99" className="text-brand-sand" />
                   <a href={ctaUrl} target="_blank" rel="noopener noreferrer" onClick={onCtaClick} className="w-full">
-                    <Button variant="secondary" size="lg" fullWidth>Adquirir ahora</Button>
+                    <Button variant="primary" size="lg" fullWidth>Adquirir ahora</Button>
                   </a>
                </div>
             </div>

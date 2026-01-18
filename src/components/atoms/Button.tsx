@@ -18,7 +18,7 @@ const Button = ({
   const baseStyles = 'inline-flex items-center justify-center font-sans font-bold transition-all duration-300 disabled:opacity-50 disabled:pointer-events-none tracking-[0.1em] uppercase rounded-none transform hover:scale-[1.02] active:scale-[0.98] border-2';
   
   const variants = {
-    primary: "bg-brand-dark text-brand-sand border-brand-dark hover:bg-transparent hover:text-brand-dark",
+    primary: "bg-[#FF4D00] text-white border-[#FF4D00] hover:bg-transparent hover:text-[#FF4D00]",
     secondary: "bg-brand-olive text-white border-brand-olive hover:bg-transparent hover:text-brand-olive",
     outline: "border-brand-dark text-brand-dark hover:bg-brand-dark hover:text-brand-sand",
     ghost: 'border-transparent text-brand-dark hover:bg-brand-dark/5',

@@ -1,13 +1,17 @@
 import React from 'react';
 import Typography from '../atoms/Typography';
 
-const Footer = () => {
+interface FooterProps {
+  onNavigate?: (page: 'landing' | 'terms' | 'privacy') => void;
+}
+
+const Footer = ({ onNavigate }: FooterProps) => {
   return (
     <footer className="bg-brand-dark text-brand-sand py-32 px-6">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-end mb-32">
           <div>
-            <Typography variant="giant" className="text-brand-sand opacity-10 mb-8 block select-none">
+            <Typography variant="giant" className="text-brand-sand opacity-10 mb-8 block select-none cursor-pointer" onClick={() => onNavigate?.('landing')}>
               A PASO <br/> FIRME.
             </Typography>
             <Typography variant="h3" className="text-brand-sand font-light italic max-w-md">
@@ -17,8 +21,8 @@ const Footer = () => {
           
           <div className="flex flex-col lg:items-end gap-12">
             <div className="text-left lg:text-right">
-              <Typography variant="caption" className="mb-4 block text-brand-olive">Contacto</Typography>
-              <Typography variant="h2" className="text-brand-sand">+57 321 829 8211</Typography>
+              <Typography variant="caption" className="mb-4 block text-brand-accent">Contacto</Typography>
+              <Typography variant="h2" className="text-brand-sand hover:text-brand-accent transition-colors cursor-pointer">+57 321 829 8211</Typography>
               <Typography variant="body" className="text-brand-sand/40">hola@apasofirme.com</Typography>
             </div>
           </div>
@@ -29,8 +33,20 @@ const Footer = () => {
             © {new Date().getFullYear()} Gabo Arriola. Todos los derechos reservados.
           </Typography>
           <div className="flex gap-12">
-            <Typography variant="caption" className="text-brand-sand/40 hover:text-brand-olive transition-colors cursor-pointer">Términos</Typography>
-            <Typography variant="caption" className="text-brand-sand/40 hover:text-brand-olive transition-colors cursor-pointer">Privacidad</Typography>
+            <Typography 
+              variant="caption" 
+              className="text-brand-sand/40 hover:text-brand-olive transition-colors cursor-pointer"
+              onClick={() => onNavigate?.('terms')}
+            >
+              Términos
+            </Typography>
+            <Typography 
+              variant="caption" 
+              className="text-brand-sand/40 hover:text-brand-olive transition-colors cursor-pointer"
+              onClick={() => onNavigate?.('privacy')}
+            >
+              Privacidad
+            </Typography>
           </div>
           <Typography variant="caption" className="text-brand-sand/20 lowercase tracking-normal">
             Design by ai4u.com.co

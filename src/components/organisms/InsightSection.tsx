@@ -16,9 +16,9 @@ const InsightSection = () => {
             </div>
             
             <Typography variant="giant" className="text-brand-sand leading-[0.85] text-right">
-              Es un <span className="text-brand-olive italic">sistema</span> <br/>
+              Es un <span className="text-[#FF4D00] italic">sistema</span> <br/>
               nervioso <br/>
-              <span className="underline decoration-brand-olive underline-offset-[16px]">saturado.</span>
+              <span className="underline decoration-[#FF4D00] underline-offset-[16px]">saturado.</span>
             </Typography>
           </div>
 

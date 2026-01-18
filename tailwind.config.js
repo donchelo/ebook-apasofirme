@@ -13,7 +13,7 @@ export default {
           dark: '#1C1917',
           olive: '#4A5D4F',
           blue: '#1E293B',
-          // Mapeos de compatibilidad si es necesario, o limpiar después
+          accent: '#FF4D00',
         }
       },
       fontFamily: {

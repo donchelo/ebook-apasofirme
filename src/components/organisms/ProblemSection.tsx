@@ -30,10 +30,10 @@ const ProblemSection = () => {
             <div className="space-y-12">
               {points.map((point, index) => (
                 <div key={index} className="group relative">
-                  <span className="absolute -left-24 top-0 text-8xl font-serif text-brand-sand/5 transition-colors group-hover:text-brand-olive/20">
+                  <span className="absolute -left-24 top-0 text-8xl font-serif text-[#FF4D00]/10 transition-colors group-hover:text-[#FF4D00]/30">
                     0{index + 1}
                   </span>
-                  <Typography variant="h2" className="text-brand-sand relative z-10 group-hover:translate-x-4 transition-transform duration-500">
+                  <Typography variant="h2" className="text-brand-sand relative z-10 group-hover:translate-x-4 transition-transform duration-500 group-hover:text-[#FF4D00]">
                     {point}
                   </Typography>
                 </div>

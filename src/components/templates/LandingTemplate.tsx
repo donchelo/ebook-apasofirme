@@ -5,16 +5,17 @@ import WhatsAppButton from '../atoms/WhatsAppButton';
 
 interface LandingTemplateProps {
   children: React.ReactNode;
+  onNavigate?: (page: 'landing' | 'terms' | 'privacy') => void;
 }
 
-const LandingTemplate = ({ children }: LandingTemplateProps) => {
+const LandingTemplate = ({ children, onNavigate }: LandingTemplateProps) => {
   return (
     <div className="min-h-screen bg-brand-sand selection:bg-brand-olive/20 selection:text-brand-dark">
-      <Navbar />
+      <Navbar onNavigate={onNavigate} />
       <main>
         {children}
       </main>
-      <Footer />
+      <Footer onNavigate={onNavigate} />
       <WhatsAppButton />
     </div>
   );
