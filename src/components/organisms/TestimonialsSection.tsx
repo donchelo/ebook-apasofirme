@@ -47,11 +47,6 @@ const TestimonialsSection = () => {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 ></iframe>
-                <div className="absolute top-4 right-4 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <Typography variant="caption" className="bg-brand-dark/90 text-brand-sand px-3 py-1">
-                    {testimonial.title}
-                  </Typography>
-                </div>
               </div>
             ))}
           </div>

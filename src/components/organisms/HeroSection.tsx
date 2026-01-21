@@ -40,9 +40,6 @@ const HeroSection = ({ title, subtitle, ctaText, videoUrl, onCtaClick }: HeroSec
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
-          <div className="absolute top-4 right-4 z-10">
-            <Typography variant="caption" className="bg-brand-dark/90 text-brand-sand px-3 py-1">Video Protagonista</Typography>
-          </div>
         </div>
       </div>
       
