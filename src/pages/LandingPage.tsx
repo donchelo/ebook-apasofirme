@@ -4,6 +4,7 @@ import HeroSection from '../components/organisms/HeroSection';
 import ProblemSection from '../components/organisms/ProblemSection';
 import InsightSection from '../components/organisms/InsightSection';
 import SolutionSection from '../components/organisms/SolutionSection';
+import TestimonialsSection from '../components/organisms/TestimonialsSection';
 import BioSection from '../components/organisms/BioSection';
 import FinalCTA from '../components/organisms/FinalCTA';
 import { trackPixelEvent } from '../utils/pixel';
@@ -20,7 +21,7 @@ const LandingPage = ({ onNavigate }: { onNavigate: (page: 'landing' | 'terms' | 
       title: "Recupera tu calma, claridad y confianza emocional.",
       subtitle: "Una guía práctica basada en neurociencia para regular tu mente, tu cuerpo y dejar de vivir en constante estrés.",
       ctaText: "Empieza con el ebook",
-      videoUrl: "https://youtu.be/QMwKu8gSmho",
+      videoUrl: "https://youtu.be/lL_KQSapcEU",
     },
     solution: {
       teaching: [
@@ -75,6 +76,8 @@ const LandingPage = ({ onNavigate }: { onNavigate: (page: 'landing' | 'terms' | 
         ctaUrl={content.solution.ctaUrl}
         onCtaClick={handlePurchase}
       />
+      
+      <TestimonialsSection />
       
       <BioSection 
         name={content.author.name}
