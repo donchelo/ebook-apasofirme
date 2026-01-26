@@ -11,12 +11,16 @@ const TestimonialsSection = () => {
 
   const testimonials = [
     {
-      id: extractYouTubeId('https://youtu.be/XVX3lTEji9E?si=0orZs8cS-n8e6n0-'),
+      id: extractYouTubeId('https://youtu.be/V6kA3bzjKo8'),
       title: 'Testimonio 1',
     },
     {
-      id: extractYouTubeId('https://youtu.be/AnLho7FflAk'),
+      id: extractYouTubeId('https://youtu.be/XVX3lTEji9E?si=0orZs8cS-n8e6n0-'),
       title: 'Testimonio 2',
+    },
+    {
+      id: extractYouTubeId('https://youtu.be/AnLho7FflAk'),
+      title: 'Testimonio 3',
     },
   ];
 

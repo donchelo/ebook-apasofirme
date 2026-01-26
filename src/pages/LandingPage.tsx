@@ -73,8 +73,6 @@ const LandingPage = ({ onNavigate }: { onNavigate: (page: 'landing' | 'terms' | 
       <SolutionSection 
         teaching={content.solution.teaching}
         benefits={content.solution.benefits}
-        ctaUrl={content.solution.ctaUrl}
-        onCtaClick={handlePurchase}
       />
       
       <TestimonialsSection />
