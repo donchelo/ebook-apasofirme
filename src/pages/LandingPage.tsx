@@ -21,7 +21,7 @@ const LandingPage = ({ onNavigate }: { onNavigate: (page: 'landing' | 'terms' | 
       title: "Recupera tu calma, claridad y confianza emocional.",
       subtitle: "Una guía práctica basada en neurociencia para regular tu mente, tu cuerpo y dejar de vivir en constante estrés.",
       ctaText: "Empieza con el ebook",
-      videoUrl: "https://youtu.be/lL_KQSapcEU",
+      videoUrl: "https://youtu.be/lXgC4xGKErM",
     },
     solution: {
       teaching: [
